@@ -45,7 +45,7 @@ class OpenCVProcessor {
 
     @BuildStep
     @Record(ExecutionTime.RUNTIME_INIT)
-    void loadRocksDb(OpenCVRecorder recorder) {
+    void loadOpenCV(OpenCVRecorder recorder) {
         // Explicitly load OpenCV at application startup.
         recorder.loadOpenCVLibrary();
     }
