@@ -1,6 +1,8 @@
 # Quarkus - OpenCV
+
+[![Version](https://img.shields.io/maven-central/v/io.quarkiverse.opencv/quarkus-opencv?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/io.quarkiverse.opencv/quarkus-opencv)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=for-the-badge)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Introduction
