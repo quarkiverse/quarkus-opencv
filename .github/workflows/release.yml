@@ -13,7 +13,7 @@ jobs:
     if: ${{github.event.pull_request.merged == true}}
 
     steps:
-      - uses: radcortez/project-metadata-action@master
+      - uses: radcortez/project-metadata-action@main
         name: Retrieve project metadata
         id: metadata
         with:
@@ -65,4 +65,5 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{github.base_ref}}
           tags: true
