@@ -8,7 +8,7 @@
     </parent>
     <artifactId>quarkus-opencv</artifactId>
     <name>Quarkus - OpenCV - Runtime</name>
-    <description>Build applications with OpenCV</description>
+    <description>Build computer vision and AI applications with OpenCV</description>
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>

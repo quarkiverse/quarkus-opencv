@@ -2,5 +2,7 @@ name: Quarkus - OpenCV
 metadata:
   keywords:
     - opencv
+    - ai
+    - "computer vision"
   categories:
-    - "miscellaneous"
+    - "business-automation"
