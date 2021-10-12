@@ -27,7 +27,7 @@ class OpenCVProcessor {
     void nativeJni(BuildProducer<RuntimeInitializedClassBuildItem> runtimeInitializedClasses,
             BuildProducer<NativeImageResourceBuildItem> nativeImageResources,
             NativeConfig nativeConfig) throws IOException {
-        if (nativeConfig.containerRuntime.isPresent() || nativeConfig.containerBuild) {
+        if (nativeConfig.isContainerBuild()) {
             nativeImageResources.produce(
                     new NativeImageResourceBuildItem(
                             OpenCVLibraryUtil.extractNativeBinary(OS.LINUX, Arch.X86_64).substring(1)));
