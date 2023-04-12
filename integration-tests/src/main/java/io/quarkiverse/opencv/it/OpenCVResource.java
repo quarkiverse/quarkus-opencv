@@ -16,14 +16,14 @@
 */
 package io.quarkiverse.opencv.it;
 
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
 
 @Path("/opencv")
 @ApplicationScoped
