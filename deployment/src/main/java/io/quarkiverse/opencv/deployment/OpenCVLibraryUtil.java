@@ -19,13 +19,13 @@ public class OpenCVLibraryUtil {
             case LINUX:
                 switch (arch) {
                     case X86_64:
-                        location = "/nu/pattern/opencv/linux/x86_64/libopencv_java455.so";
+                        location = "/nu/pattern/opencv/linux/x86_64/libopencv_java470.so";
                         break;
                     case ARMv7:
-                        location = "/nu/pattern/opencv/linux/ARMv7/libopencv_java455.so";
+                        location = "/nu/pattern/opencv/linux/ARMv7/libopencv_java470.so";
                         break;
                     case ARMv8:
-                        location = "/nu/pattern/opencv/linux/ARMv8/libopencv_java455.so";
+                        location = "/nu/pattern/opencv/linux/ARMv8/libopencv_java470.so";
                         break;
                     default:
                         throw new UnsupportedPlatformException(os, arch);
@@ -34,7 +34,10 @@ public class OpenCVLibraryUtil {
             case OSX:
                 switch (arch) {
                     case X86_64:
-                        location = "/nu/pattern/opencv/osx/x86_64/libopencv_java455.dylib";
+                        location = "/nu/pattern/opencv/osx/x86_64/libopencv_java470.dylib";
+                        break;
+                    case ARMv8:
+                        location = "/nu/pattern/opencv/osx/ARMv8/libopencv_java470.dylib";
                         break;
                     default:
                         throw new UnsupportedPlatformException(os, arch);
@@ -43,10 +46,10 @@ public class OpenCVLibraryUtil {
             case WINDOWS:
                 switch (arch) {
                     case X86_32:
-                        location = "/nu/pattern/opencv/windows/x86_32/opencv_java455.dll";
+                        location = "/nu/pattern/opencv/windows/x86_32/opencv_java470.dll";
                         break;
                     case X86_64:
-                        location = "/nu/pattern/opencv/windows/x86_64/opencv_java455.dll";
+                        location = "/nu/pattern/opencv/windows/x86_64/opencv_java470.dll";
                         break;
                     default:
                         throw new UnsupportedPlatformException(os, arch);
