@@ -12,7 +12,8 @@ import io.quarkus.deployment.annotations.Record;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.NativeImageResourceBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.RuntimeInitializedClassBuildItem;
-import io.quarkus.deployment.pkg.NativeConfig;
+import io.quarkus.deployment.pkg.builditem.NativeImageRunnerBuildItem;
+import io.quarkus.deployment.pkg.steps.NativeOrNativeSourcesBuild;
 
 class OpenCVProcessor {
 
@@ -23,11 +24,11 @@ class OpenCVProcessor {
         return new FeatureBuildItem(FEATURE);
     }
 
-    @BuildStep
+    @BuildStep(onlyIf = NativeOrNativeSourcesBuild.class)
     void nativeJni(BuildProducer<RuntimeInitializedClassBuildItem> runtimeInitializedClasses,
             BuildProducer<NativeImageResourceBuildItem> nativeImageResources,
-            NativeConfig nativeConfig) throws IOException {
-        if (nativeConfig.isContainerBuild()) {
+            NativeImageRunnerBuildItem nativeImageRunner) throws IOException {
+        if (nativeImageRunner.isContainerBuild()) {
             nativeImageResources.produce(
                     new NativeImageResourceBuildItem(
                             OpenCVLibraryUtil.extractNativeBinary(OS.LINUX, Arch.X86_64).substring(1)));
