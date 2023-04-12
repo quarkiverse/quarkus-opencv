@@ -19,6 +19,13 @@ With this Quarkus extension, you can use [OpenCV](https://opencv.org/) in native
 
 The OpenCV library is loaded automatically when starting your application so you don't need to load it yourself.
 
+## Compatibility
+
+| Quarkus | Quarkus OpenCV |
+|---------|----------------|
+| 2.x     | 1.x            |
+| 3.x     | 2.x            |
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
