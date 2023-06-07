@@ -71,4 +71,9 @@
             </modules>
         </profile>
     </profiles>
+    <scm>
+        <connection>scm:git:git@github.com:quarkiverse/quarkus-opencv.git</connection>
+        <developerConnection>scm:git:git@github.com:quarkiverse/quarkus-opencv.git</developerConnection>
+        <url>https://github.com/quarkiverse/quarkus-opencv</url>
+    </scm>
 </project>
