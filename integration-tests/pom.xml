@@ -74,6 +74,7 @@
                                 <configuration>
                                     <systemPropertyVariables>
                                         <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+                                        <quarkus.test.arg-line>-XX:MaxDirectMemorySize=128m</quarkus.test.arg-line>
                                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                                         <maven.home>${maven.home}</maven.home>
                                     </systemPropertyVariables>
