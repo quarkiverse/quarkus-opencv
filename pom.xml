@@ -24,7 +24,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>3.6.0</quarkus.version>
 
-        <opencv.version>4.7.0-0</opencv.version>
+        <opencv.version>4.8.1-0</opencv.version>
     </properties>
     <dependencyManagement>
         <dependencies>
