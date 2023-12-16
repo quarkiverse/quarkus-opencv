@@ -18,4 +18,13 @@ public class OpenCVResourceTest {
                 .statusCode(200)
                 .body(is("2"));
     }
+
+    @Test
+    public void testDnn() {
+        given()
+                .when().get("/opencv/dnn")
+                .then()
+                .statusCode(200)
+                .body(is("org.opencv.dnn.Net"));
+    }
 }
