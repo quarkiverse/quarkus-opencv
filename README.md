@@ -19,6 +19,14 @@ With this Quarkus extension, you can use [OpenCV](https://opencv.org/) in native
 
 The OpenCV library is loaded automatically when starting your application so you don't need to load it yourself.
 
+## Going native
+
+Quarkus OpenCV supports creating native executables with Mandrel/GraalVM.
+
+However, given how the OpenCV library is copied to a temporary location by the OpenPnP packaging, you might need to pass the `-XX:MaxDirectMemorySize=128m` option to the native executable.
+
+This issue will be [solved in Java 22](https://bugs.openjdk.org/browse/JDK-8316156).
+
 ## Compatibility
 
 | Quarkus | Quarkus OpenCV |
