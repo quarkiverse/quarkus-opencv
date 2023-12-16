@@ -31,8 +31,8 @@ This issue will be [solved in Java 22](https://bugs.openjdk.org/browse/JDK-83161
 
 | Quarkus | Quarkus OpenCV |
 |---------|----------------|
-| 2.x     | 1.x            |
 | 3.x     | 2.x            |
+| 2.x     | 1.x            |
 
 ## Contributors ✨
 
