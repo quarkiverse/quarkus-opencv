@@ -27,6 +27,16 @@ However, given how the OpenCV library is copied to a temporary location by the O
 
 This issue will be [solved in Java 22](https://bugs.openjdk.org/browse/JDK-8316156).
 
+## Running in a container
+
+The OpenCV native library shipped by OpenPnP is built against `glibc 2.29` or later. Running the application on an older base image, such as UBI 8 (`glibc 2.28`), fails at startup with:
+
+```
+UnsatisfiedLinkError: .../libopencv_java481.so: /lib64/libm.so.6: version `GLIBC_2.29' not found
+```
+
+Use a base image with `glibc 2.29` or newer, such as UBI 9 or Fedora. Quarkus already defaults to UBI 9 images, so applications built with a recent Quarkus version work out of the box in both JVM and native mode.
+
 ## Compatibility
 
 | Quarkus | Quarkus OpenCV |
